@@ -11,6 +11,9 @@ import {
 import About from './About'
 import Reservation from './Reservation'
 import Home from './Home'
+import UserDataForm from './UserDataForm'
+
+
 
 function App() {
   return (
@@ -24,13 +27,14 @@ function App() {
                     <div className="col-md-12">
                         <Router>
                             <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-                                <Navbar.Brand href="#home">React Bootstrap Navbar</Navbar.Brand>
+                                <Navbar.Brand href="#home">Blue Table</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                     <Nav.Link href="/">Home</Nav.Link>
                                     <Nav.Link href="/About">About</Nav.Link>
                                     <Nav.Link href="/Reservation">Reservation</Nav.Link>
+                                    <Nav.Link href="/UserDataForm">UserDataForm</Nav.Link>
                                     
                                     </Nav>
                                     
@@ -47,6 +51,9 @@ function App() {
                                 <Route path="/Reservation">
                                     <Reservation />
                                 </Route>
+                                <Route path="/UserDataForm">
+                                  <UserDataForm />
+                                </Route>
                             </Switch>
                         </Router>
                     </div>
@@ -59,32 +66,7 @@ function App() {
        
 
 
-        <Card className="mb-3" style={{color:"#000"}}>
-          <Card.Img src="https://images.unsplash.com/photo-1589446552403-965d9191981a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1630&q=80" />
-          <Card.Body>
-            <Card.Title> 
-              Card Example
-            </Card.Title>
-            <Card.Text>Text</Card.Text>
-          </Card.Body>
-        </Card>
-        <Breadcrumb>
-          <Breadcrumb.Item>Test</Breadcrumb.Item>
-          <Breadcrumb.Item>Test</Breadcrumb.Item>
-          <Breadcrumb.Item>Test</Breadcrumb.Item>
-        </Breadcrumb>
         
-
-       
-
-        <Alert variant="primary">This is a button</Alert>
-        <Button>Test</Button>
-
-        
-
-
-
-          Learn React
 
       </header>
     </div>

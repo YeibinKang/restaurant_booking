@@ -1,6 +1,19 @@
 import {FormControl,Navbar, Nav, Container, Row, Col, Button, Alert, Breadcrumb, Card, Form} from 'react-bootstrap'
+import {useState} from 'react'
+import { Modal } from 'react-bootstrap';
 
 function Reservation(){
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      console.log('The Form Was Submitted');
+    }
 
     return(
         <div>
@@ -55,7 +68,31 @@ function Reservation(){
         </Row>
       
           <br/>
-          <Button variant="secondary" type="submit">Create</Button>
+          
+          
+        
+        <>
+
+      <Button variant="primary" onClick={handleShow}>Create</Button>
+      <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+
+
+    
+          
           
         </Form>
 
