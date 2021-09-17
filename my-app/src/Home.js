@@ -28,12 +28,11 @@ function Home(){
         return(
             <div>
             
-                <Image variant="top" src="https://images.pexels.com/photos/261403/pexels-photo-261403.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500&w=800" fluid={true} rounded></Image>
                 <br></br>
                 <h2>Waiting list</h2>
                 <table className="table table-bordered">
                     <thead>
-                        <tr>
+                        <tr font="white">
                             <th>Name</th>
                             <th>Number of People</th>
                             <th>Phone Number</th>

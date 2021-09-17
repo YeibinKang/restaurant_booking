@@ -35,12 +35,11 @@ function App() {
                                     <Nav.Link href="/About">About</Nav.Link>
                                     <Nav.Link href="/Reservation">Reservation</Nav.Link>
                                     <Nav.Link href="/UserDataForm">UserDataForm</Nav.Link>
-                                    
                                     </Nav>
-                                    
                                 </Navbar.Collapse>
                             </Navbar>
                             <br />
+
                             <Switch>
                                 <Route exact path="/">
                                     <Home />
@@ -55,6 +54,7 @@ function App() {
                                   <UserDataForm />
                                 </Route>
                             </Switch>
+                            
                         </Router>
                     </div>
                 </div>
